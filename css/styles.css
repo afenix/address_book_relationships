@@ -1,0 +1,29 @@
+#show-contact {
+  display: none;
+  border: 3px solid #565858;
+  padding: 20px 20px 20px 20px;
+  background-color: #E7EFEF;
+
+}body {
+  background-color: #BCC0BC;
+}
+
+h1 {
+  font-family: Helvetica;
+  color: #006B6B;
+  text-align: center;
+}
+
+h2 {
+  font-family: Georgia, Times, Helvetica;
+  color: #565858;
+}
+
+.contact {
+  cursor: pointer;
+  color: #CC4040;
+}
+
+.contact:hover {
+  text-decoration: underline;
+}
