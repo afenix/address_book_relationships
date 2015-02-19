@@ -55,17 +55,26 @@ $(document).ready(function() {
                             + newContact.lastName
                             + "</span></li>");
 
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-    $("input#new-address").val("");
-
-
     $(".contact").last().click(function() {
       $("#show-contact").show();
       $("#show-contact h2").text(newContact.firstName + " " + newContact.lastName);
       $(".first-name").text(newContact.firstName);
       $(".last-name").text(newContact.lastName);
-      $(".address").text(newContact.fullAddress());
+      $("ul#addresses").text("");
+      newContact.addresses.forEach(function(address) {
+        $("ul#addresses").append("<li>" + address.street + ", "
+                                        + address.city + ", "
+                                        + address.state + ", "
+                                        + address.zip + "</li>");
+      });
     });
+
+
+        $("input#new-first-name").val("");
+        $("input#new-last-name").val("");
+        $("input#new-street").val("");
+        $("input#new-city").val("");
+        $("input#new-state").val("");
+        $("input#new-zip").val("");
   });
 });
