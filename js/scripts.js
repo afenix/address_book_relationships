@@ -46,13 +46,14 @@ $(document).ready(function() {
                          state: inputtedState,
                          zip: inputtedZip
                        };
+      newContact.addresses.push(newAddress);
     });
 
     $("ul#contacts").append("<li><span class='contact'>"
-                             + newContact.firstName
-                              + " "
-                               + newContact.lastName
-                                + "</span></li>");
+                            + newContact.firstName
+                            + " "
+                            + newContact.lastName
+                            + "</span></li>");
 
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
